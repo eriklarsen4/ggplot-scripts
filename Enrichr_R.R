@@ -1,3 +1,7 @@
+#### This script will use the R-version of EnrichR to extract information about gene lists from online tools such as pathways####
+#### It is formatted currently to use Panther 2016 - needs to be updated.#####
+#### Last modified 4-29-20 by Martha Bhattacharya###########
+
 install.packages("enrichR")
 library(enrichR)
 library(tidyverse)
@@ -7,7 +11,8 @@ library(reshape2)
 library(dplyr)
 
 
-
+##### STOP. You will need to load a file containing the Adj P < (your preferred threshold) in the format that DeSeq2 provides. ######
+#### Here I am using Adj P < 0.01 as my cutoff, and have already loaded it into R. ########
 
 HITS.01$GeneID <- as.character(HITS.01$GeneID)
 str(HITS.01)
@@ -21,7 +26,8 @@ list(dbs$libraryName[panther_rows])
 #this reveals that there is a 2015 and 2016 
  "ftp://ftp.pantherdb.org/panther_library/current_release/PANTHER15.0_hmmscoring.tgz"
  
- 
+####### This is an attempt to download the latest Panther version and make EnrichR use it. Not working yet. ########## 
+
  panther15 <- "ftp://ftp.pantherdb.org/hmm_classifications/current_release/PANTHER15.0_HMM_classifications"
  download.file(panther15,destfile="N:/Martha/Big Data from others/Panther 15.0/panther15")
  untar("panther15.tar.gz",list=TRUE)  ## check contents
@@ -36,6 +42,8 @@ list(dbs$libraryName[panther_rows])
  PANTHER.db
  #restrict to mouse
  pthOrganisms(PANTHER.db) <- "MOUSE"
+
+############## Proceed with Panther 2016 version ################
  
 #we'll just use the 2016 version; make a variable for this character string and run
 dbsp <- "Panther_2016"
@@ -69,6 +77,9 @@ genelist <- read.csv("M://Omics//e13_panther_genes.csv")
 str(genelist)
 genedf <- genelist[3:nrow(genelist),]
 genelist$Panther.Term[[2]]
+
+
+############### Things to try but are not working yet, below ########################333
 
 #okay, so the list of things to tackle include:
   #1 - figure out the rank list of genes appearing in the lists

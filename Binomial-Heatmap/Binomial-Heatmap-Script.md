@@ -14,13 +14,14 @@ transcriptional profiling.
 
 ## Environment Prep
 
-Note that code can be sectioned and condensed with the ‘Alt + O’
+Note that code can be sectioned and condensed with the `Alt + O`
 command.
 
 List of packages for this script:
 [tidyverse](https://cran.r-project.org/package=tidyverse),
 [stringr](https://cran.r-project.org/package=stringr),
-[reshape2](https://cran.r-project.org/package=reshape2),[readr](https://cran.r-project.org/package=readr),
+[reshape2](https://cran.r-project.org/package=reshape2),
+[readr](https://cran.r-project.org/package=readr),
 [ggplot2](https://cran.r-project.org/package=ggplot2)
 
 ``` r
@@ -33,7 +34,7 @@ library(stringr)
 
 ``` r
   ## Import the relevant data
-e13_DEGs_and_Pathways =  read_csv("https://github.com/eriklarsen4/ggplot-scripts/blob/master/Binomial-Heatmap/Custom%20Python%20Enrichr%20Pathway%20Clustergram%20e13%20GT.csv")
+e13_DEGs_and_Pathways =  read_csv("C:/Users/Erik/Desktop/BoxCopy/Lab/Omics/RNAseq/Embryonic DRG/Analysis/Heatmaps/Custom Python Enrichr Pathway Clustergram e13 GT.csv")
 
   ## Re-arrange the data so that columns and rows can be run appropriately in a heatmap
 e13_Heatmap = melt(e13_DEGs_and_Pathways, id = "DEGs")
@@ -65,6 +66,32 @@ e13_Heatmap$`Presence In Pathway` = as.factor(e13_Heatmap$`Presence In Pathway`)
 (There are 84 genes involved, so for aesthetic readability, they have
 been omitted from the plot)
 
+``` r
+## Use geom_tile to map the binary values
+    ## Customize by removing the filler surrounding the graph and the tickmarks
+      ## Center the Title
+
+HEATER = ggplot(e13_Heatmap, aes(e13_Heatmap$Pathways, e13_Heatmap$DEGs)) +
+  geom_tile(aes(fill = e13_Heatmap$`Presence In Pathway`), color = "black") +
+  scale_fill_manual(values = c("dark blue", "gold")) +
+  labs(x = "Panther 2016 Pathways", y = "Differentially Expressed Genes\n(FDR < 0.01)",
+       title = expression(paste("Heatmap of ", italic("Tmem184b")^"GT/GT","-affected Pathways"))) +
+  guides(fill = guide_legend(title = "Presence in Pathway")) +
+  scale_x_discrete(expand = c(0, 0)) +
+  scale_y_discrete(expand = c(0, 0)) +
+  theme(axis.title.y = element_text(margin = margin(t = 0, r = 20, b = 20, l = 0)),
+        axis.ticks.y = element_blank(), 
+        axis.text.x = element_blank(),
+        panel.grid.major = element_line(colour = "black", size = 0.1),
+        panel.grid.minor = element_line(colour = "black", size = 0.1),
+        plot.title = element_text(hjust = 0.5),
+        legend.title = element_text(hjust = 0)) +
+  coord_flip()
+
+## Plot the heatmap
+HEATER
+```
+
     ## Warning: Use of `e13_Heatmap$`Presence In Pathway`` is discouraged. Use
     ## `Presence In Pathway` instead.
 
@@ -72,4 +99,4 @@ been omitted from the plot)
 
     ## Warning: Use of `e13_Heatmap$DEGs` is discouraged. Use `DEGs` instead.
 
-![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Binomial-Heatmap/Heatmap%20of%20DEGs%20Identified%20Across%20PANTHER%20Pathways%20wLabs-1.png)<!-- -->
+![](Binomial-Heatmap-Script_files/figure-gfm/Heatmap%20of%20DEGs%20Identified%20Across%20PANTHER%20Pathways%20wLabs-1.png)<!-- -->

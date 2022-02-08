@@ -92,11 +92,4 @@ HEATER = ggplot(e13_Heatmap, aes(e13_Heatmap$Pathways, e13_Heatmap$DEGs)) +
 HEATER
 ```
 
-    ## Warning: Use of `e13_Heatmap$`Presence In Pathway`` is discouraged. Use
-    ## `Presence In Pathway` instead.
-
-    ## Warning: Use of `e13_Heatmap$Pathways` is discouraged. Use `Pathways` instead.
-
-    ## Warning: Use of `e13_Heatmap$DEGs` is discouraged. Use `DEGs` instead.
-
 ![](Binomial-Heatmap-Script_files/figure-gfm/Heatmap%20of%20DEGs%20Identified%20Across%20PANTHER%20Pathways%20wLabs-1.png)<!-- -->

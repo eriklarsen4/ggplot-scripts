@@ -14,7 +14,7 @@ transcriptional profiling.
 
 ## Environment Prep
 
-Note that code can be sectioned and condensed with the ‘Alt + O’
+Note that code can be sectioned and condensed with the `Alt + O`
 command.
 
 List of packages for this script:

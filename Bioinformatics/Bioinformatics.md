@@ -20,7 +20,7 @@ the console using the
 package.
 
 The source script of this file is the [Bioinformatics R
-Script](C:/Users/Erik/Desktop/BoxCopy/Programming%20Scripts%20and%20Data/Bio/Scripts/R/Broad/Bioinformatics%20Script.R).
+Script](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Bioinformatics%20Script.R).
 
 Standalone analyses or tutorials, including volcano plotting, and gene
 ontology and pathway analysis can be found in other R Markdown files and
@@ -29,7 +29,7 @@ Markdown](C:/Users/Erik/Desktop/BoxCopy/Lab/Omics/Gene-Ontology-and-Pathway-Anal
 companion [GO Analysis R
 Script](C:/Users/Erik/Desktop/BoxCopy/Programming%20Scripts%20and%20Data/Bio/Scripts/R/Specific/Searches/GO%20Analysis.R),
 [Volcano plot tutorial R
-Markdown](C:/Users/Erik/Desktop/BoxCopy/Lab/Omics/Volcano-plot-tutorial.html),
+Markdown](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Volcano-plot-tutorial.html),
 and companion [Volcano R
 Script](C:/Users/Erik/Desktop/BoxCopy/Programming%20Scripts%20and%20Data/Bio/Scripts/R/Specific/Graphs/Volcano%20Script.R).
 
@@ -227,7 +227,7 @@ Enrichr_Analysis = function(Genes){
 Import the adult DRG DESeq2 file
 
 ``` r
-aDRG = read.csv("C:/Users/Erik/Desktop/BoxCopy/Lab/Omics/RNAseq/Adult DRG/Processed Galaxy Output/Test Results to Upload/DESeq2 Expression Results.csv")
+aDRG = read.csv("https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/RNAseq%20Data%20Files/DESeq2%20Expression%20Results.csv")
   
   ## Filter (subset) genes that went undetected or were outliers in terms of counts;
   ## new dataframe should not contain any NAs in p-value columns
@@ -259,7 +259,7 @@ Import the P10 DRG DESeq2 file and proceed as before (not shown).
 Import the in vitro DRG data.
 
 ``` r
-DIV14 = read.csv("C:/Users/Erik/Desktop/BoxCopy/Lab/Omics/RNAseq/Embryonic DRG/Processed Galaxy Output/Test Results to Upload/Cultured Embryos for Genotype at DIV14.csv")
+DIV14 = read.csv("https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/RNAseq%20Data%20Files/Cultured%20Embryos%20for%20Genotype%20at%20DIV14.csv")
 
 colnames(DIV14) = colnames(aDRG)[c(1:7)]
 
@@ -309,7 +309,7 @@ Import the adult transcriptional profile (normalized TPM).
   ## Import the adult normalized counts file.
     ## These are expression estimates for each gene, for each sample/replicate,
     ## where each gene's value is normalized to its sample's effect size
-aTPM = read_csv("C:/Users/Erik/Desktop/BoxCopy/Lab/Omics/RNAseq/Adult DRG/Processed Galaxy Output/Counts files to Upload/RNASeqRepResults.csv", col_names = TRUE)
+aTPM = read_csv("https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/RNAseq%20Data%20Files/RNASeqRepResults.csv", col_names = TRUE)
   ## Rename columns
 colnames(aTPM) = c("GeneID", "WT1", "WT2", "WT3", "WT4", "Mut1", "Mut2", "Mut3", "Mut4")
 
@@ -382,7 +382,7 @@ pheatmap(mat = Za[,2:9],
          show_rownames = F)
 ```
 
-![](Bioinformatics_files/figure-gfm/Full%20Z-scored,%20Euclidean-clustered%20and%20ordered%20pheatmap-1.png)<!-- -->
+![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Plots/Full%20Z-scored%2C%20Euclidean-clustered%20and%20ordered%20pheatmap-1.png)<!-- -->
 
 **View the cluster near Tmem184b**.
 
@@ -397,7 +397,7 @@ pheatmap(mat = Za[1597:1637,2:9],
          labels_row = Euclid_dist_ord_Genes[1597:1637])
 ```
 
-![](Bioinformatics_files/figure-gfm/Tmem184b%20cluster%20Zoom%20on%20Z-scored%20Euclidean-clustered%20and%20ordered%20pheatmap-1.png)<!-- -->
+![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Plots/Tmem184b%20cluster%20Zoom%20on%20Z-scored%20Euclidean-clustered%20and%20ordered%20pheatmap-1.png)<!-- -->
 
 **View the cluster including select itch transcripts**.
 
@@ -428,19 +428,19 @@ Prep it for a heatmap as before (not shown).
 **Plot the results of the profile of only DEGs in Tmem184b-mutant DRG
 neurons.**
 
-![](Bioinformatics_files/figure-gfm/Z-scored%20Euclidean-clustered%20and%20ordered%20pheatmap%20of%20DEGS-1.png)<!-- -->
+![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Plots/Z-scored%20Euclidean-clustered%20and%20ordered%20pheatmap%20of%20DEGS-1.png)<!-- -->
 
 **Zoom to Tmem184b**.
 
-![](Bioinformatics_files/figure-gfm/Tmem184b%20Cluster%20Zoom%20Z-scored%20Euclidean-clustered%20ordered%20pheatmap%20of%20DEGs-1.png)<!-- -->
+![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Plots/Tmem184b%20Cluster%20Zoom%20Z-scored%20Euclidean-clustered%20ordered%20pheatmap%20of%20DEGs-1.png)<!-- -->
 
 **Zoom to the area comprising many itch genes**.
 
-![](Bioinformatics_files/figure-gfm/Itch%20DEG%20Cluster%20Zoom%20Z-scored%20Euclidean-clustered%20ordered%20pheatmap%20of%20DEGs-1.png)<!-- -->
+![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Plots/Itch%20DEG%20Cluster%20Zoom%20Z-scored%20Euclidean-clustered%20ordered%20pheatmap%20of%20DEGs-1.png)<!-- -->
 
 **View select itch genes**.  
 The difference between the first three heatmaps and the last four
 heatmaps is hierarchically clustering only on DEGs in the last four.
 Clustering was performed on all genes in the first three.
 
-![](Bioinformatics_files/figure-gfm/Itch%20DEG%20only%20of%20Z-scored%20Euclidean-clustered%20ordered%20pheatmap%20of%20DEGs-1.png)<!-- -->
+![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Plots/Itch%20DEG%20only%20of%20Z-scored%20Euclidean-clustered%20ordered%20pheatmap%20of%20DEGs-1.png)<!-- -->

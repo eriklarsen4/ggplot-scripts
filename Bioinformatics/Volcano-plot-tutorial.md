@@ -42,7 +42,7 @@ Import the `Usegalaxy.org` data frame from the lab server that contains
 mean transcript counts of all the P60 WT and TMEM-GT/GT mice.
 
 ``` r
-aDRG_TPM = read_csv("C:/Users/Erik/Desktop/BoxCopy/Lab/Omics/RNAseq/Adult DRG/Processed Galaxy Output/Counts files to Upload/RNASeqRepResults.csv", col_names = c("GeneID", "WT", "Mut"))
+aDRG_TPM = read_csv("https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/RNAseq%20Data%20Files/RNASeqRepResults.csv", col_names = c("GeneID", "WT", "Mut"))
 ```
 
 Import the differential expression analysis data if not already done
@@ -65,7 +65,7 @@ files to determine which genes are differentially expressed.
     `Comprehensive RNAseq` script– the Adult (“aDRG”) dataset
 
 ``` r
-aDRG = read.csv("C:/Users/Erik/Desktop/BoxCopy/Lab/Omics/RNAseq/Adult DRG/Processed Galaxy Output/Test Results to Upload/DESeq2 Expression Results.csv")
+aDRG = read.csv("https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/RNAseq%20Data%20Files/DESeq2%20Expression%20Results.csv")
   
   ## Filter (subset) genes that went undetected or were outliers in terms of counts;
   ## new dataframe should not contain any NAs in p-value columns
@@ -264,7 +264,7 @@ Plot the first volcano
 vol1
 ```
 
-![](Volcano-plot-tutorial_files/figure-gfm/Broad%20aDRG%20Volcano-1.png)<!-- -->
+![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Plots/Broad%20aDRG%20Volcano-1.png)<!-- -->
 
 ## Second volcano plot
 
@@ -340,4 +340,4 @@ Plot the second volcano
 vol2
 ```
 
-![](Volcano-plot-tutorial_files/figure-gfm/Itch%20Volcano-1.png)<!-- -->
+![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Plots/Itch%20Volcano-1.png)<!-- -->

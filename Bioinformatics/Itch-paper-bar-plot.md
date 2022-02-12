@@ -66,7 +66,7 @@ library(enrichR) ## Querying the enrichr db, which accesses the GO and PANTHER d
 Import the relevant data.
 
 ``` r
-e13_DRG = read.csv("C:/Users/Erik/Desktop/BoxCopy/Lab/Omics/RNAseq/Embryonic DRG/Processed Galaxy Output/Test Results to Upload/e13/DESeq2_result_file_on_GT_e13_PARA.csv",
+e13_DRG = read.csv("https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/RNAseq%20Data%20Files/DESeq2_result_file_on_GT_e13_PARA.csv",
                    header = FALSE)
 ```
 
@@ -265,7 +265,7 @@ GO_BAR_ADJP = ggplot(GO_Bar,
 GO_BAR_ADJP
 ```
 
-![](Itch-paper-bar-plot_files/figure-gfm/GO%20Biological%20Processes%20Bar%20Plot-1.png)<!-- -->
+![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Plots/GO%20Biological%20Processes%20Bar%20Plot-1.png)<!-- -->
 
 ## Plot the Panther Pathways bar plot
 
@@ -292,4 +292,4 @@ PATHWAY_BAR_ADJP = ggplot(Pathway_Bar,
 PATHWAY_BAR_ADJP
 ```
 
-![](Itch-paper-bar-plot_files/figure-gfm/Pathways%20Bar%20Blot%20by%20Qvalue-1.png)<!-- -->
+![](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Plots/Pathways%20Bar%20Blot%20by%20Qvalue-1.png)<!-- -->

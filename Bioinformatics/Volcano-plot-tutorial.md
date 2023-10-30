@@ -3,7 +3,7 @@ Volcano plots with ggplot
 Erik Larsen
 7/16/2021
 
-I developed the following code as a tutorial for graphical analysis of long-read, `Illumina` transcriptomic data in Dr. Martha Bhattacharya's lab. We processed the reads on a 3rd party server,
+I developed the following code as a tutorial for graphical analysis of long-read, `Illumina` transcriptomic data in `Dr. Martha Bhattacharya`'s lab at UA. We processed the reads on a 3rd party server,
 [Usegalaxy.org](https://usegalaxy.org/), using a bioinformatics standard
 differential expression algorithm, known as
 [DESeq2](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8).

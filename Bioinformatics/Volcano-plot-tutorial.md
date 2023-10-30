@@ -78,8 +78,7 @@ aDRG3 = subset(aDRG, (!is.na(aDRG[,"AdjP"])))
 
  ## Filter the DEGs by removing rRNAs and mitochondrial tRNAs.
 aDRG9 = aDRG3 %>%
-  filter(!grepl(aDRG3$GeneID,
-pattern = "Rps.+.?$|RP.+.?$|Rpl.+.?$|MRPL.+.?$|Mrpl.+.?$|MRPS.+.?$|Mrps.+.?$|.*Rik.+$|.*Rik$|Gm.+.?$|^[A-Z]+[A-Z].+.?$|^[0-9]+.+.?$"))
+  filter(!grepl(aDRG3$GeneID, pattern = "Rps.+.?$|RP.+.?$|Rpl.+.?$|MRPL.+.?$|Mrpl.+.?$|MRPS.+.?$|Mrps.+.?$|.*Rik.+$|.*Rik$|Gm.+.?$|^[A-Z]+[A-Z].+.?$|^[0-9]+.+.?$"))
 #mt.+.?$|  <-- string identifier for mitochondrial tRNAs
 
   ## Add a column to the DEG dataset that contains a string, describing whether the gene is differentially expressed

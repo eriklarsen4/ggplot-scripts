@@ -119,7 +119,7 @@ length(
 
 Subset the dataframe to select differentially expressed genes with
 Adjusted P-values &lt; 0.05 for use in pathway analysis tools (see [GO Analysis.md](https://github.com/eriklarsen4/Proteomics/blob/main/GO%20Analysis/GO-Analysis.md) to find potential mechanistic
-pathways or other genes/interactions of interest.
+pathways or other genes/interactions of interest).
 
 ``` r
 HITS.01 = subset(aDRG9, aDRG9$AdjP <= 0.01)

@@ -280,7 +280,7 @@ vol1
 
 ## Second volcano plot
 
-Let’s add a little more rich data
+Adding a little more specific data..
 
 ``` r
   ## Re-set the mapping columm
@@ -308,7 +308,9 @@ aDRG9$labs2 = ""
 aDRG9$labs2[c(2,5,8,9,13,20,30,51,112,331)] = aDRG9$GeneID[c(2,5,8,9,13,20,30,51,112,331)]
 ```
 
-Store the new graph as a new variable + add a new subset + zoom in
++ Store the new graph as a new variable
++ add a new subset
++ zoom in
 
 ``` r
 vol2 = ggplot(data = aDRG9) + 

@@ -47,7 +47,7 @@ Our paired-end RNA-seq transcript reads were first aligned using `Salmon`, a pse
   + in this analysis, the reads do *not* account for alternative splicing, though `Salmon` is capable of doing so
 
 Import the `Usegalaxy.org` data frame from the lab server that contains
-mean transcript counts of all the *Tmem184b*^GT/GT^ mice.
+mean transcript counts of all the *Tmem184b*^{GT/GT} mice.
 
 ``` r
 aDRG_TPM = read_csv("https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/RNAseq%20Data%20Files/RNASeqRepResults.csv", col_names = c("GeneID", "WT", "Mut"))

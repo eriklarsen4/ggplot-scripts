@@ -134,7 +134,7 @@ Candidate_Screen = aDRG_TPM %>%
 ## Volcano plot prep
 
 Volcano plots display the `fold change` of the manipulation relative to
-control (in this case, `log<sub>2</sub>FC` of mutant transcripts relative to
+control (in this case, log<sub>2</sub>(FC) of mutant transcripts relative to
 wild type) along the x-axis, and `Adjusted P-values` along the y-axis
 
 Transform the `Adjusted P-values` so that they are integers and are

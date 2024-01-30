@@ -72,7 +72,8 @@ e13_DRG = read.csv("https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bi
 
 ## Data prep
 
-For the `GSEA` data (`DESeq2`): + add appropriate column names  
+For the `GSEA` data (`DESeq2`):
++ add appropriate column names  
 + remove pseudogenes and rRNAs  
 + subset genes that went undetected or were outliers in terms of
 counts/reads

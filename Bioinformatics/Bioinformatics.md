@@ -40,7 +40,7 @@ Erik Larsen
 -   Standalone analyses or tutorials, including volcano plotting, and
     `gene ontology` and `pathway analysis` can be found in other
     `R/Github Markdown` files and scripts, [Gene Ontology Analysis
-    Snippet](https://github.com/eriklarsen4/Proteomics/blob/main/GO%20Analysis/GO-Analysis.md)
+    Snippet](https://github.com/eriklarsen4/RNAseq/blob/master/GO%20Analysis/GO-Analysis.md)
     and [Volcano plot tutorial R
     Markdown](https://github.com/eriklarsen4/ggplot-scripts/blob/master/Bioinformatics/Volcano-plot-tutorial.md)
 
